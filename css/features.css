@@ -14,6 +14,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 10rem;
+  justify-content: space-between;
   text-align: center;
   scroll-snap-type: y mandatory;
 }
@@ -22,22 +24,42 @@
   flex-direction: column;
   text-align: center;
   gap: 2rem;
-  padding: 1rem;
+  padding: 2rem;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   scroll-padding: 2rem;
-  min-height: 70vh;
+  min-height: 75vh;
   & h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
     text-align: center;
   }
   & img {
-    width: 60%;
+    width: 80%;
     height: auto;
     margin: 0 auto;
   }
   & p {
     font-size: 1.2rem;
-    text-align: center;
+    text-align: justify;
+  }
+}
+
+/* Media queries for desktop screens */
+
+@media (width > 1080px) {
+  .feature-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 40%;
+  }
+  .features > .feature_wrapper {
+    flex-direction: row;
+    & h2 {
+      text-align: left;
+    }
   }
 }
